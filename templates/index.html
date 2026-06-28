@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+NeuroScreen
+</title>
+
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js">
+</script>
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+
+<div class="logo">
+🧠 NeuroScreen
+</div>
+
+
+<div class="nav-text">
+EEG Mental Health Screening
+</div>
+
+
+</nav>
+
+
+
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+
+<h1>
+Analisis Aktivitas Otak Berbasis EEG
+</h1>
+
+
+<p>
+Eksplorasi pola gelombang otak menggunakan
+Artificial Intelligence
+</p>
+
+
+</header>
+
+
+
+
+
+<!-- EDUKASI EEG -->
+
+
+<section class="card">
+
+<h2>
+🧠 EEG Insight
+</h2>
+
+
+<p>
+Sistem menganalisis aktivitas listrik otak
+menggunakan pola frekuensi EEG.
+</p>
+
+
+
+<div class="brain-info">
+
+
+<div>
+<strong>α Alpha</strong>
+<br>
+Relaxation
+</div>
+
+
+<div>
+<strong>β Beta</strong>
+<br>
+Focus
+</div>
+
+
+<div>
+<strong>θ Theta</strong>
+<br>
+Emotion
+</div>
+
+
+<div>
+<strong>δ Delta</strong>
+<br>
+Low Frequency
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- WORKFLOW -->
+
+
+<section class="card">
+
+
+<h2>
+⚙️ Bagaimana Sistem Bekerja?
+</h2>
+
+
+<div class="workflow">
+
+
+<div>
+1️⃣
+<br>
+Upload EEG
+</div>
+
+
+<div>
+2️⃣
+<br>
+Signal Processing
+</div>
+
+
+<div>
+3️⃣
+<br>
+Feature Extraction
+</div>
+
+
+<div>
+4️⃣
+<br>
+AI Prediction
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- INPUT -->
+
+
+<section class="card">
+
+
+<h2>
+🚀 Mulai Analisis EEG
+</h2>
+
+
+
+<label>
+Nama Pengguna
+</label>
+
+
+<input
+
+type="text"
+
+id="username"
+
+placeholder="Masukkan nama pengguna"
+
+>
+
+
+
+<label>
+File EEG (.txt)
+</label>
+
+
+<input
+
+type="file"
+
+id="file"
+
+accept=".txt"
+
+>
+
+
+
+
+<button onclick="analyze()">
+
+Analisis EEG
+
+</button>
+
+
+
+<div id="loading"
+class="hidden">
+
+
+⏳ Memproses sinyal EEG...
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- RESULT -->
+
+
+<section id="result"
+class="card hidden">
+
+
+
+<h2 id="hello">
+
+</h2>
+
+
+
+
+<div class="result-box">
+
+
+<h3>
+Risk Score
+</h3>
+
+
+<div class="score">
+
+<span id="score">
+0
+</span>
+
+%
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<h3>
+📈 Visualisasi Sinyal EEG
+</h3>
+
+
+<p>
+
+Tampilan sinyal setelah preprocessing
+seperti monitoring EEG.
+
+</p>
+
+
+
+<canvas id="eegChart">
+
+</canvas>
+
+
+
+
+
+
+
+
+<h3>
+🧠 Brain Wave Distribution
+</h3>
+
+
+
+<canvas id="waveChart">
+
+</canvas>
+
+
+
+
+
+
+
+
+<div class="note">
+
+
+⚠️
+
+Hasil ini merupakan skrining awal
+berbasis EEG dan bukan diagnosis medis.
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+<p>
+
+NeuroScreen - EEG Based AI Screening System
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+<script
+
+src="{{ url_for('static', filename='script.js') }}">
+
+</script>
+
+
+
+</body>
+
+
+</html>
