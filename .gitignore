@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+
+# Environment variables
+.env
+
+
+# User uploaded EEG data
+uploads/
+
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# OS files
+.DS_Store
+Thumbs.db
